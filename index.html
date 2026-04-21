@@ -1,344 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Najla Alhammadi | Technical Projects</title>
-<style>
-:root{
---bg:#0b1020;
---bg2:#121a33;
---card:#151f3d;
---text:#eef2ff;
---muted:#b8c1e0;
---line:rgba(255,255,255,0.08);
---accent:#8b5cf6;
---accent2:#22d3ee;
---gold:#fbbf24;
---shadow:0 12px 35px rgba(0,0,0,0.28);
---radius:22px;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Najla Alhammadi | Technical Projects</title>
+  <meta name="description" content="Portfolio of Najla Alhammadi showcasing AWS, Cloud, Automation, and Technical Projects." />
+  <style>
+    :root {
+      --bg: #0b1020;
+      --bg2: #121a33;
+      --card: #151f3d;
+      --text: #eef2ff;
+      --muted: #b8c1e0;
+      --line: rgba(255,255,255,0.08);
+      --accent: #8b5cf6;
+      --accent2: #22d3ee;
+      --gold: #fbbf24;
+      --shadow: 0 12px 35px rgba(0,0,0,0.28);
+      --radius: 22px;
+    }
 
-*{box-sizing:border-box;}
+    * { box-sizing: border-box; }
 
-html{
-scroll-behavior:smooth;
-}
+    html { scroll-behavior: smooth; }
 
-body{
-margin:0;
-font-family: Arial, Helvetica, sans-serif;
-background:
-radial-gradient(circle at top left, rgba(139,92,246,0.18), transparent 28%),
-radial-gradient(circle at top right, rgba(34,211,238,0.16), transparent 22%),
-linear-gradient(160deg, var(--bg), var(--bg2));
-color:var(--text);
-line-height:1.7;
-}
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(139,92,246,0.18), transparent 28%),
+        radial-gradient(circle at top right, rgba(34,211,238,0.16), transparent 22%),
+        linear-gradient(160deg, var(--bg), var(--bg2));
+      color: var(--text);
+      line-height: 1.7;
+    }
 
-.container{
-width:min(1120px, 92%);
-margin:auto;
-}
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
 
-.hero{
-padding:72px 0 36px;
-}
+    .hero {
+      padding: 72px 0 36px;
+    }
 
-.hero-box{
-background:linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
-border:1px solid var(--line);
-border-radius:28px;
-padding:42px 34px;
-box-shadow:var(--shadow);
-position:relative;
-overflow:hidden;
-}
+    .hero-box {
+      background: linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 42px 34px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
 
-.hero-box::before{
-content:"";
-position:absolute;
-width:220px;
-height:220px;
-border-radius:50%;
-background:rgba(139,92,246,0.18);
-top:-80px;
-right:-60px;
-filter:blur(10px);
-}
+    .hero-box::before,
+    .hero-box::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(10px);
+    }
 
-.hero-box::after{
-content:"";
-position:absolute;
-width:180px;
-height:180px;
-border-radius:50%;
-background:rgba(34,211,238,0.14);
-bottom:-70px;
-left:-60px;
-filter:blur(12px);
-}
+    .hero-box::before {
+      width: 220px;
+      height: 220px;
+      background: rgba(139,92,246,0.18);
+      top: -80px;
+      right: -60px;
+    }
 
-h1{
-margin:0 0 12px;
-font-size:clamp(34px, 5vw, 56px);
-line-height:1.1;
-letter-spacing:0.3px;
-position:relative;
-z-index:1;
-}
+    .hero-box::after {
+      width: 180px;
+      height: 180px;
+      background: rgba(34,211,238,0.14);
+      bottom: -70px;
+      left: -60px;
+      filter: blur(12px);
+    }
 
-.subtitle{
-margin:0;
-color:var(--muted);
-font-size:18px;
-position:relative;
-z-index:1;
-}
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 1.1;
+      letter-spacing: 0.3px;
+      position: relative;
+      z-index: 1;
+    }
 
-.badge-row{
-display:flex;
-flex-wrap:wrap;
-gap:12px;
-margin-top:22px;
-position:relative;
-z-index:1;
-}
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+      position: relative;
+      z-index: 1;
+    }
 
-.badge{
-padding:10px 16px;
-border-radius:999px;
-border:1px solid rgba(255,255,255,0.1);
-background:rgba(255,255,255,0.05);
-color:#ffffff;
-font-size:14px;
-}
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+      position: relative;
+      z-index: 1;
+    }
 
-.section-title{
-margin:38px 0 18px;
-font-size:30px;
-display:flex;
-align-items:center;
-gap:12px;
-}
+    .badge {
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.05);
+      color: #ffffff;
+      font-size: 14px;
+    }
 
-.section-title::before{
-content:"";
-width:14px;
-height:14px;
-border-radius:50%;
-background:linear-gradient(135deg, var(--accent), var(--accent2));
-box-shadow:0 0 18px rgba(139,92,246,0.55);
-}
+    .section-title {
+      margin: 38px 0 18px;
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
 
-.projects{
-display:grid;
-gap:22px;
-padding-bottom:50px;
-}
+    .section-title::before {
+      content: "";
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 18px rgba(139,92,246,0.55);
+    }
 
-.project-card{
-background:linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.03));
-border:1px solid var(--line);
-border-radius:var(--radius);
-box-shadow:var(--shadow);
-padding:26px;
-transition:transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
-}
+    .projects {
+      display: grid;
+      gap: 22px;
+      padding-bottom: 50px;
+    }
 
-.project-card:hover{
-transform:translateY(-4px);
-border-color:rgba(139,92,246,0.38);
-box-shadow:0 18px 42px rgba(0,0,0,0.34);
-}
+    .project-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.03));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 26px;
+      transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+    }
 
-.project-top{
-display:flex;
-justify-content:space-between;
-align-items:flex-start;
-gap:18px;
-margin-bottom:14px;
-flex-wrap:wrap;
-}
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(139,92,246,0.38);
+      box-shadow: 0 18px 42px rgba(0,0,0,0.34);
+    }
 
-.project-title{
-margin:0;
-font-size:26px;
-line-height:1.25;
-}
+    .project-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 18px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
 
-.project-date{
-white-space:nowrap;
-padding:8px 14px;
-border-radius:999px;
-background:rgba(251,191,36,0.12);
-color:#ffe3a1;
-border:1px solid rgba(251,191,36,0.25);
-font-weight:bold;
-font-size:14px;
-}
+    .project-title {
+      margin: 0;
+      font-size: 26px;
+      line-height: 1.25;
+    }
 
-.project-highlight{
-margin:0 0 16px;
-padding:14px 16px;
-border-left:4px solid var(--accent2);
-background:rgba(34,211,238,0.08);
-border-radius:12px;
-color:#f7fbff;
-}
+    .project-date {
+      white-space: nowrap;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(251,191,36,0.12);
+      color: #ffe3a1;
+      border: 1px solid rgba(251,191,36,0.25);
+      font-weight: bold;
+      font-size: 14px;
+    }
 
-.project-highlight b{
-color:#ffffff;
-}
+    .project-highlight {
+      margin: 0 0 16px;
+      padding: 14px 16px;
+      border-left: 4px solid var(--accent2);
+      background: rgba(34,211,238,0.08);
+      border-radius: 12px;
+      color: #f7fbff;
+    }
 
-.project-text{
-margin:0;
-color:var(--muted);
-font-size:16px;
-}
+    .project-highlight b { color: #ffffff; }
 
-ul.project-list{
-margin:0;
-padding-left:22px;
-color:var(--muted);
-}
+    .project-text {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
 
-ul.project-list li{
-margin:8px 0;
-}
+    ul.project-list {
+      margin: 0;
+      padding-left: 22px;
+      color: var(--muted);
+    }
 
-.footer{
-padding:8px 0 42px;
-text-align:center;
-color:var(--muted);
-font-size:14px;
-}
+    ul.project-list li { margin: 8px 0; }
 
-@media (max-width: 700px){
-.hero{
-padding-top:42px;
-}
+    .footer {
+      padding: 8px 0 42px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
 
-.hero-box{
-padding:28px 22px;
-}
-
-.project-card{
-padding:20px;
-}
-
-.project-title{
-font-size:22px;
-}
-
-.section-title{
-font-size:24px;
-}
-}
-</style>
+    @media (max-width: 700px) {
+      .hero { padding-top: 42px; }
+      .hero-box { padding: 28px 22px; }
+      .project-card { padding: 20px; }
+      .project-title { font-size: 22px; }
+      .section-title { font-size: 24px; }
+    }
+  </style>
 </head>
 <body>
 
-<div class="container">
-<section class="hero">
-<div class="hero-box">
-<h1>Najla Alhammadi</h1>
-<p class="subtitle">AWS • Cloud • Automation • Technical Projects Portfolio</p>
+  <div class="container">
+    <section class="hero">
+      <div class="hero-box">
+        <h1>Najla Alhammadi</h1>
+        <p class="subtitle">AWS • Cloud • Automation • Technical Projects Portfolio</p>
+        <div class="badge-row">
+          <span class="badge">Cloud Engineering</span>
+          <span class="badge">Serverless Solutions</span>
+          <span class="badge">AWS Automation</span>
+          <span class="badge">Technical Projects</span>
+        </div>
+      </div>
+    </section>
 
-<div class="badge-row">
-<span class="badge">Cloud Engineering</span>
-<span class="badge">Serverless Solutions</span>
-<span class="badge">AWS Automation</span>
-<span class="badge">Technical Projects</span>
-</div>
-</div>
-</section>
+    <h2 class="section-title">Technical Projects</h2>
 
-<h2 class="section-title">Technical Projects</h2>
+    <section class="projects">
 
-<section class="projects">
+      <article class="project-card">
+        <div class="project-top">
+          <h3 class="project-title">Automated GCC Differences Reports</h3>
+          <span class="project-date">January 2026</span>
+        </div>
+        <p class="project-highlight"><b>Automated solution for cross-workbook transaction validation, mismatch detection, and exception reporting</b></p>
+        <p class="project-text">
+          Built an Excel VBA automation tool that compares two banking transaction workbooks using normalized transaction reference keys to identify reconciliation exceptions with zero manual processing. The tool auto-detects headers and relevant columns across sheets, handles inconsistent formatting (spaces, commas, scientific notation, leading zeros), and generates structured report sheets for key scenarios including missing approved transactions, decline cases existing in both files while excluding reversal duplicates, and reversal mismatch detection. Designed as a single macro-enabled workbook with a button-driven workflow for selecting input files and producing clean audit-ready outputs.
+        </p>
+      </article>
 
-<article class="project-card">
-<div class="project-top">
-<h3 class="project-title">Automated GCC Differences Reports</h3>
-<span class="project-date">January 2026</span>
-</div>
-<p class="project-highlight"><b>Automated solution for cross-workbook transaction validation, mismatch detection, and exception reporting</b></p>
-<p class="project-text">
-Built an Excel VBA automation tool that compares two banking transaction workbooks using normalized transaction reference keys to identify reconciliation exceptions with zero manual processing. The tool auto-detects headers and relevant columns across sheets, handles inconsistent formatting (spaces, commas, scientific notation, leading zeros), and generates structured report sheets for key scenarios including missing approved transactions, decline cases existing in both files while excluding reversal duplicates, and reversal mismatch detection. Designed as a single macro-enabled workbook with a button-driven workflow for selecting input files and producing clean audit-ready outputs.
-</p>
-</article>
+      <article class="project-card">
+        <div class="project-top">
+          <h3 class="project-title">Cloudflare IP Range Monitoring &amp; Alerting System</h3>
+          <span class="project-date">December 2025</span>
+        </div>
+        <p class="project-highlight"><b>Serverless solution for automated Cloudflare IPv4 and IPv6 IP range monitoring and alerting</b></p>
+        <p class="project-text">
+          Fully serverless AWS automation that monitors Cloudflare IP range updates using Amazon EventBridge and AWS Lambda. The solution fetches Cloudflare IP ranges via the public API, compares them with the previous version stored in Amazon S3, and sends automated email alerts through Amazon SES when IP changes are detected.
+        </p>
+      </article>
 
-<article class="project-card">
-<div class="project-top">
-<h3 class="project-title">Cloudflare IP Range Monitoring &amp; Alerting System</h3>
-<span class="project-date">December 2025</span>
-</div>
-<p class="project-highlight"><b>Serverless solution for automated Cloudflare IPv4 and IPv6 IP range monitoring and alerting</b></p>
-<p class="project-text">
-Fully serverless AWS automation that monitors Cloudflare IP range updates using Amazon EventBridge and AWS Lambda. The solution fetches Cloudflare IP ranges via the public API, compares them with the previous version stored in Amazon S3, and sends automated email alerts through Amazon SES when IP changes are detected.
-</p>
-</article>
+      <article class="project-card">
+        <div class="project-top">
+          <h3 class="project-title">CloudWatch Widget Rotation and Alerting Automation System</h3>
+          <span class="project-date">November 2025</span>
+        </div>
+        <p class="project-highlight"><b>Serverless solution for automated CloudWatch dashboard rotation and real-time alerting</b></p>
+        <p class="project-text">
+          Fully serverless monitoring solution using EventBridge, AWS Lambda, S3, CloudWatch Dashboards, and SES to dynamically rotate dashboard widgets and centralize alert visibility. Widget configurations are grouped and stored in S3, then rotated automatically on a dynamic dashboard. The system continuously scans CloudWatch alarms, updates a dedicated alert dashboard, and sends automated email notifications for critical alarms, improving operational visibility and incident response efficiency.
+        </p>
+      </article>
 
-<article class="project-card">
-<div class="project-top">
-<h3 class="project-title">CloudWatch Widget Rotation and Alerting Automation System</h3>
-<span class="project-date">November 2025</span>
-</div>
-<p class="project-highlight"><b>Serverless solution for automated CloudWatch dashboard rotation and real-time alerting</b></p>
-<p class="project-text">
-Fully serverless monitoring solution using EventBridge, AWS Lambda, S3, CloudWatch Dashboards, and SES to dynamically rotate dashboard widgets and centralize alert visibility. Widget configurations are grouped and stored in S3, then rotated automatically on a dynamic dashboard. The system continuously scans CloudWatch alarms, updates a dedicated alert dashboard, and sends automated email notifications for critical alarms, improving operational visibility and incident response efficiency.
-</p>
-</article>
+      <article class="project-card">
+        <div class="project-top">
+          <h3 class="project-title">EC2 Auto Tagging</h3>
+          <span class="project-date">May 2025</span>
+        </div>
+        <p class="project-highlight"><b>Serverless solution for automated EC2 tagging and compliance alerts</b></p>
+        <p class="project-text">
+          Fully serverless EC2 auto-tagging solution using CloudTrail, EventBridge, and three Lambda functions to apply metadata such as creator email and department. Untagged instance data is stored in DynamoDB, and Amazon SES sends automated alerts for missing tags.
+        </p>
+      </article>
 
-<article class="project-card">
-<div class="project-top">
-<h3 class="project-title">EC2 Auto Tagging</h3>
-<span class="project-date">May 2025</span>
-</div>
-<p class="project-highlight"><b>Serverless solution for automated EC2 tagging and compliance alerts</b></p>
-<p class="project-text">
-Fully serverless EC2 auto-tagging solution using CloudTrail, EventBridge, and three Lambda functions to apply metadata such as creator email and department. Untagged instance data is stored in DynamoDB, and Amazon SES sends automated alerts for missing tags.
-</p>
-</article>
+      <article class="project-card">
+        <div class="project-top">
+          <h3 class="project-title">Virtual Machines Patching</h3>
+          <span class="project-date">November 2024</span>
+        </div>
+        <ul class="project-list">
+          <li>Patching Linux servers using SUSE Manager software.</li>
+          <li>Aligning the virtual machines versions to the latest security concerns by patching.</li>
+        </ul>
+      </article>
 
-<article class="project-card">
-<div class="project-top">
-<h3 class="project-title">Virtual Machines Patching</h3>
-<span class="project-date">November 2024</span>
-</div>
-<ul class="project-list">
-<li>Patching Linux servers using SUSE Manager software.</li>
-<li>Aligning the virtual machines versions to the latest security concerns by patching.</li>
-</ul>
-</article>
+      <article class="project-card">
+        <div class="project-top">
+          <h3 class="project-title">Virtual Machine Migration</h3>
+          <span class="project-date">October 2024</span>
+        </div>
+        <ul class="project-list">
+          <li>Migrating virtual machines from VMware 5.5 to VMware 7.0.</li>
+        </ul>
+      </article>
 
-<article class="project-card">
-<div class="project-top">
-<h3 class="project-title">Virtual Machine Migration</h3>
-<span class="project-date">October 2024</span>
-</div>
-<ul class="project-list">
-<li>Migrating virtual machines from VMware 5.5 to VMware 7.0.</li>
-</ul>
-</article>
+      <article class="project-card">
+        <div class="project-top">
+          <h3 class="project-title">Voice-Controlled Chatbot Robot</h3>
+          <span class="project-date">May 2023</span>
+        </div>
+        <p class="project-text">
+          Voice-Controlled chatbot robot for Ahlia University using web scraping. The Campus Robotic Guide System uses autonomous robots equipped with sensors to navigate and assist on campus. They provide directions, answer questions, deliver packages, and enhance security and emergency response.
+        </p>
+      </article>
 
-<article class="project-card">
-<div class="project-top">
-<h3 class="project-title">Voice-Controlled Chatbot Robot</h3>
-<span class="project-date">May 2023</span>
-</div>
-<p class="project-text">
-Voice-Controlled chatbot robot for Ahlia University using web scraping. The Campus Robotic Guide System uses autonomous robots equipped with sensors to navigate and assist on campus. They provide directions, answer questions, deliver packages, and enhance security and emergency response.
-</p>
-</article>
+    </section>
 
-</section>
-
-<div class="footer">
-© 2026 Najla Alhammadi • Portfolio Website
-</div>
-</div>
+    <footer class="footer">
+      © 2026 Najla Alhammadi • Portfolio Website
+    </footer>
+  </div>
 
 </body>
 </html>
